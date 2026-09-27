@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ai-рецепты</title>
+    <style>
+    .pre-size{
+        height: fit-content;
+        width: 600px;
+        background-color: lightgoldenrodyellow;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 15px;
+        border: 5px solid darkkhaki;
+    }
+    .input-style{
+        min-height: 30px;
+        width: 600px;
+        border-radius: 15px;
+        border-color: #959633;
+    }
+    .centre{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .button-send{
+        height: 30px;
+        width: 80px;
+        border-radius: 15px;
+        border-color: #959633;
+        background-color: #e2e38d;
+    }
+    .body-style{
+        background-image: url('/static/background.png');
+    }
+</style>
+</head>
+<body class="body-style">
+    <div class="centre">
+        <div>
+            <input class="input-style"  id="prompt">
+            <button id="send_message" class="button-send">send</button>
+            <div class="pre-size">
+                <h2 id="recipe-title"></h2>
+                <p id="recipe-description"></p>
+                <ul>
+                    <li><span>Время: </span><span id="recipe-time"></span></li>
+                    <li><span>Порции: </span><span id="recipe-servings"></span></li>
+                    <li><span>Сложность: </span><span id="recipe-difficulty"></span></li>
+                </ul>
+                <div class="recipe-body">
+                <section>
+                  <h3>Ингредиенты</h3>
+                  <ul id="recipe-ingredients"></ul>
+                </section>
+                <section>
+                  <h3>Приготовление</h3>
+                  <ol id="recipe-steps"></ol>
+                </section>
+              </div>
+              <aside id="recipe-tips"></aside>
+            </div>
+        </div>
+    </div>
+<script src="/static/js/script.js"></script>
+</body>
+</html>
